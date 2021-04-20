@@ -1,0 +1,27 @@
+body{
+    background-color: #62C8E4;
+    font-family: sans-serif;
+    color: #fefb1e;
+}
+
+section{
+    display: flex;
+    flex-wrap:wrap-reverse;
+    margin: 40px;
+ 
+    
+
+}
+div{
+    background-color: #16a085;
+    margin: 20px;
+    width: 100%;
+    
+}
+p{
+    margin: 20px;
+    width: 300px;
+}
+.character{
+    font-size: 40px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="img/the_simpsons.png" alt="">
+    </header>
+    <section>
+        <%results.forEach(data=>{%>
+        <div>
+         <p><%=data.quote%></p>
+          <p><%=data.character%></p>
+          <img src="<%=data.image%>" alt=""> 
+            <p><%=data.characterDirection%></p>
+        </div>
+<form action="/delete/<%=data.quote_id%>?_method=DELETE" method="POST">
+<button type="submit">Delete</button>
+</form>
+
+<form action="/update/<%=data.quote_id%>?_method=PUT" method="POST">
+<input type="text" name="quote" value="<%=data.quote%>">
+<input type="text" name="character" value="<%=data.character%>">
+<input type="text" name="image" value="<%=data.image%>">
+  <input type="text" name="characterDirection" value="<%=data.characterDirection%>"> 
+  <button type="submit">update</button> 
+</form>
+        <%})%>
+    </section>
+</body>
+</html>

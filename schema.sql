@@ -1,0 +1,17 @@
+DROP TABLE qoutes;
+CREATE TABLE IF NOT EXISTS qoutes(
+quote VARCHAR(255),
+character VARCHAR(255),
+image VARCHAR(255),
+characterDirection VARCHAR(255)
+);
+
+DROP TABLE users;
+CREATE TABLE IF NOT EXISTS users(
+  id SERIAL PRIMARY KEY NOT NULL,
+  first_name VARCHAR(256) NOT NULL,
+  last_name VARCHAR(256) NOT NULL,
+  ssn INTEGER NOT NULL,
+  ninja_status BOOLEAN NOT NULL,
+  biography TEXT NOT NULL
+);
